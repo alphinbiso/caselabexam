@@ -1,0 +1,73 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :COCOMO MOdel
+ Date :16/02/2026
+****************************************/
+PROGRAM
+----------------------------------------
+/***************************************
+
+class COCOMOModel:
+	def __init__(self, kloc, project_type, cost_per_hour):
+		self.kloc = kloc
+		self.project_type = project_type
+		self.cost_per_hour = cost_per_hour
+		
+	def get_constants(self):
+		#Constant a and b for different project types
+		if self.project_type == "organic":
+			return 2.4, 1.05
+		elif self.project_type == "semi-detached":
+			return 3.0, 1.12
+		elif self.project_type == "embedded":
+			return 3.6, 1.20
+		else:
+			raise ValueError("Invalid project type. Choose from 'organic', 'semi-detached', or 'embedded'.")
+			
+	def calculate_effort(self):
+		a, b = self.get_constants()
+		effort = a * (self.kloc ** b) #Effort in person-months
+		return effort
+		
+	def calculate_cost(self):
+		effort = self.calculate_effort()
+		cost = effort * self.cost_per_hour * 160 #Assume 160 hours per month
+		return cost
+		
+	def display_results(self):
+		effort = self.calculate_effort()
+		cost = self.calculate_cost()
+		
+		print(f"Project Type: {self.project_type}")
+		print(f"Size of project (KLOC): {self.kloc}")
+		print(f"Effort Estimate (person-months): {effort:.2f}")
+		print(f"Cost Estimate (in currency): {cost:.2f}")
+		
+def main():
+		print("COCOMO Model Estimation Tool")
+		kloc =float(input("Enter the size of the project in KLOC (thousands of lines of code): "))
+		project_type = input("Enter the projct_type(organic/semi-detached/embedded):").lower()
+		cost_per_hour = float(input("enter the cost per hour of the developer: "))
+		
+		cocomo = COCOMOModel (kloc, project_type, cost_per_hour)
+		cocomo.display_results()
+		
+if __name__ == "__main__":
+	main()
+
+****************************************/
+----------------------------------------
+OUTPUT
+
+COCOMO Model Estimation Tool
+Enter the size of the project in KLOC (thousands of lines of code): 5
+Enter the projct_type(organic/semi-detached/embedded):organic
+enter the cost per hour of the developer: 50
+Project Type: organic
+Size of project (KLOC): 5.0
+Effort Estimate (person-months): 13.01
+Cost Estimate (in currency): 104044.65
+

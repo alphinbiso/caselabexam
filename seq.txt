@@ -1,0 +1,37 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Sequence Diagram
+ Date :07/01/2026
+****************************************/
+PROGRAM
+
+@startuml
+
+actor User
+participant "Login Page" as LP
+participant "Authentication System" as AS
+database DB
+
+User -> LP: Enter username & password
+LP -> AS: Send login credentials
+AS -> DB: Verify user details
+DB --> AS: Valid user
+AS --> LP: Login success
+LP --> User: Display dashboard
+
+actor Owner
+participant "Report Page" as RP
+participant "Inventory System" as IS
+
+Owner -> RP: Request report
+RP -> IS: Fetch report data
+IS -> DB: Retrieve report details
+DB --> IS: Report data
+IS --> RP: Generate report
+RP --> Owner: Display report
+
+@enduml
+

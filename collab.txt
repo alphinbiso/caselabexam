@@ -1,0 +1,35 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Collaboration Diagram
+ Date :14/01/2026
+****************************************/
+PROGRAM
+
+STOCK UPDATE
+
+@startuml
+
+participant Admin
+participant Staff
+participant InventorySystem
+participant Product
+participant Database
+
+Admin --> InventorySystem : 1.login()
+InventorySystem --> Database : 2.verifyUser()
+Database --> InventorySystem : 3.userValid()
+
+Staff --> InventorySystem : 4.enterStockDetails()
+InventorySystem --> Product : 5.updateProductStock()
+Product --> Database : 6.saveStock()
+Database --> Product : 7.stockSaved()
+Product --> InventorySystem : 8.updateSuccess()
+
+InventorySystem --> Staff : 9.showConfirmation()
+Staff --> Admin : 10.stockUpdatedInfo()
+
+@enduml
+

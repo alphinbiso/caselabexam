@@ -1,0 +1,149 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Class Diagram
+ Date :07/01/2026
+****************************************/
+PROGRAM
+----------------------------------------
+/***************************************
+@startuml
+
+'Base class
+
+class User{
+- userId : int
+- username : String
+- password : String
+- role : String
++ login()
++ logout()
+}
+
+'Derived classes
+
+class Admin{
++ manageUsers()
++ manageProducts()
++ manageSuppliers()
++ manageCustomers()
++ viewReports()
+}
+
+class Staff{
++ stockIn()
++ updateStock()
++ viewInventory()
+}
+
+class Owner{
++ viewReports()
++ viewAlerts()
+}
+
+'Inheritance
+
+User <|-- Admin
+User <|-- Staff
+User <|-- Owner
+
+'Strong classes
+
+class Product {
+- productId : int
+- productName : String
+- price : double
+- quantity : int
++ addProduct()
++ updateProduct()
+}
+
+class Supplier {
+- supplierId : int
+- supplierName : String
+- contact : String
++ addSupplier()
++ updateSupplier()
+}
+
+class Customer {
+- customerId : int
+- customerName : String
+- contact : String
++ addCustomer()
++ updateCustomer()
+}
+
+class Inventory {
+- inventoryId : int
+- location : String
++ updateStock()
++ checkStock()
+}
+
+class Report {
+- reportId : int
+- reportType : String
++ generateReport()
++ viewReport()
+}
+
+'Weak classes
+
+class StockTransaction {
+- transactionId : int
+- type : String
+- quantity : int
+- date : Date
++ recordTransaction()
+}
+
+class LowStockAlert {
+- alertId : int
+- threshold : int
++ generateAlert()
+}
+
+class LoginSession {
+- sessionId : int
+- loginTime : DateTime
+- logoutTime : DateTime
++ startSession()
++ endSession()
+}
+
+'Associations
+
+' User associations
+User "1" -- "many" LoginSession : creates
+
+' Admin associations
+Admin "1" -- "many" User : manages
+Admin "1" -- "many" Product : manages
+Admin "1" -- "many" Supplier : manages
+Admin "1" -- "many" Customer : manages
+Admin "1" -- "many" Report : views
+
+' Staff associations
+Staff "1" -- "1" Inventory : updates
+Staff "1" -- "many" StockTransaction : records
+
+' Owner associations
+Owner "1" -- "many" Report : views
+Owner "1" -- "many" LowStockAlert : receives
+
+' Inventory associations
+Inventory "1" -- "1..*" Product : contains
+Inventory "1" -- "many" StockTransaction : records
+Inventory "1" -- "many" LowStockAlert : monitors
+
+' Product associations
+Supplier "1" -- "many" Product : supplies
+
+
+@enduml
+
+****************************************/
+----------------------------------------

@@ -1,0 +1,152 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Forward
+ Date :16/02/2026
+****************************************/
+PROGRAM
+----------------------------------------
+/***************************************
+import java.util.*;
+
+/**
+ * Class User
+ */
+public class User {
+
+  private int userId;
+  private String username;
+  private String passord;
+  private String role;
+  
+  public User () { };
+  
+  private void setUserId (int newVar) {
+    userId = newVar;
+  }
+
+  private int getUserId () {
+    return userId;
+  }
+
+  private void setUsername (String newVar) {
+    username = newVar;
+  }
+
+  private String getUsername () {
+    return username;
+  }
+
+
+  private void setPassord (String newVar) {
+    passord = newVar;
+  }
+
+  private String getPassord () {
+    return passord;
+  }
+
+ 
+  private void setRole (String newVar) {
+    role = newVar;
+  }
+
+  private String getRole () {
+    return role;
+  }
+
+
+  public void login()
+  {
+  }
+
+  public void logout()
+  {
+  }
+}
+*****************************************************************
+
+import java.util.*;
+/**
+ * Class Staff
+ */
+public class Staff extends User {
+
+  public Staff () { };
+  
+  public void stockIn()
+  {
+  }
+
+  public void updateStock()
+  {
+  }
+
+  public void viewInventory()
+  {
+  }
+}
+******************************************************************
+
+import java.util.*;
+/**
+ * Class Owner
+ */
+public class Owner extends User {
+
+  public Owner () { };
+  
+  public void viewReport()
+  {
+  }
+  public void viewAlert()
+  {
+  }
+}
+*******************************************************************
+
+import java.util.*;
+/**
+ * Class Customer
+ */
+public class Customer {
+
+  private int customerId;
+  private String customerName;
+  private String contact;
+  
+  public Customer () { };
+  private void setCustomerId (int newVar) {
+    customerId = newVar;
+  }
+
+  private int getCustomerId () {
+    return customerId;
+  }
+
+  private void setCustomerName (String newVar) {
+    customerName = newVar;
+  }
+
+  private String getCustomerName () {
+    return customerName;
+  }
+
+  private void setContact (String newVar) {
+    contact = newVar;
+  }
+
+  private String getContact () {
+    return contact;
+  }
+
+  public void addCustomer()
+  {
+  }
+  public void updateCustomer()
+  {
+  }
+}
+***************************************************************

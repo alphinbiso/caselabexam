@@ -1,0 +1,55 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Activity Diagram
+ Date :31/12/2025
+****************************************/
+PROGRAM
+----------------------------------------
+/***************************************
+@startuml
+|Admin|
+start
+
+:Login;
+:Enter Username;
+:Enter Password;
+
+if (Login Successful?) then (Yes)
+
+|Admin|
+:Manage Users;
+:Configure System;
+:Add Item;
+:Update Stock;
+:Record Stock Issues;
+:Generate Reports;
+:View Reports;
+
+|Staff|
+:Add Item;
+:Update Stock;
+:Track Stock Movement;
+:View Inventory;
+
+|Owner|
+:View Reports;
+:View Alerts;
+:View Inventory;
+:Plan Restocking;
+
+:Logout;
+
+else (No)
+:Display Login Error;
+endif
+
+stop
+
+@enduml
+
+****************************************/
+----------------------------------------
+

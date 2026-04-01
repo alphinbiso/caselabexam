@@ -1,0 +1,34 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Deployment
+ Date :09/02/2026
+****************************************/
+PROGRAM
+
+@startuml
+    top to bottom direction
+
+    together {
+        node "Mobile Inventory App" as MobileApp
+        node "Web Inventory Application" as WebApp
+    }
+
+    node "API Gateway" as APIGateway
+    node "Inventory Application Server" as AppServer
+    node "Database Server" as DBServer
+
+    database "Inventory Database" as InventoryDB
+
+    MobileApp --> APIGateway : REST API
+    WebApp --> APIGateway : REST API
+
+    APIGateway --> AppServer : Service Requests
+
+    AppServer --> DBServer : SQL Queries
+    DBServer --> InventoryDB : Data Storage
+
+@enduml
+

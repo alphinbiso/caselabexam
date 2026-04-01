@@ -1,0 +1,51 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Usecase Diagram
+ Date :17/12/2025
+****************************************/
+PROGRAM
+----------------------------------------
+/***************************************
+
+@startuml
+
+left to right direction
+
+actor "Admin/Manager" as AdminManager
+actor "Staff/Inventory Clerk" as StaffInventoryClerk
+actor "End User/Store Owner" as EndUserStoreOwner
+
+rectangle "Inventory Management System" {
+
+AdminManager -- (Login/Logout)
+AdminManager -- (Manage Users)
+AdminManager -- (Manage Products)
+AdminManager -- (Manage Suppliers)
+AdminManager -- (Manage Customers)
+
+(Login/Logout) -- StaffInventoryClerk
+(Manage Products) -- StaffInventoryClerk
+(Stock In) -- StaffInventoryClerk
+(Stock Out/Sales) -- StaffInventoryClerk
+(Update Stock) -- StaffInventoryClerk
+(Low Stock Alerts) -- StaffInventoryClerk
+
+EndUserStoreOwner -- (Login/Logout)
+EndUserStoreOwner -- (Stock Out/Sales)
+EndUserStoreOwner -- (View Reports)
+EndUserStoreOwner -- (Update Stock)
+EndUserStoreOwner -- (Low Stock Alerts)
+ 
+(Stock In) --> (Update Stock) : <<include>>
+(Stock Out/Sales) --> (Update Stock) : <<include>>
+
+(Low Stock Alerts) ..> (Update Stock) : <<extend>>
+}
+
+@enduml
+
+****************************************/
+----------------------------------------

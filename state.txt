@@ -1,0 +1,34 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :State Chart Diagram
+ Date :14/01/2026
+****************************************/
+PROGRAM
+
+@startuml
+[*] --> Login
+
+Login --> Dashboard : valid login
+Login --> Login : invalid login
+
+Dashboard --> ManageProducts : manage products
+ManageProducts --> Dashboard : done
+
+Dashboard --> StockIn : stock in
+StockIn --> UpdateStock : add quantity
+UpdateStock --> Dashboard : updated
+
+Dashboard --> StockOut : sales
+StockOut --> UpdateStock : reduce quantity
+UpdateStock --> Dashboard : updated
+
+Dashboard --> ViewReports : view reports
+ViewReports --> Dashboard : back
+
+Dashboard --> Logout : logout
+Logout --> [*]
+@enduml
+

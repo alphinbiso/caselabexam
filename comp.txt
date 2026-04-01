@@ -1,0 +1,37 @@
+/****************************************
+ Name :NAEEMA NISHAD
+ Semester :S6
+ Branch :Computer Science and Design
+ Roll No: 36
+ Program :Componenet Diagram
+ Date :09/02/2026
+****************************************/
+PROGRAM
+@startuml
+
+package "Inventory Management System" {
+
+    [User Interface] --> [Inventory System API]
+    [Inventory System API] --> [Database]
+    [Inventory System API] --> [Authentication Service]
+    [Inventory System API] --> [Product Management]
+    [Inventory System API] --> [Stock Management]
+    [Inventory System API] --> [Supplier Management]
+    [Inventory System API] --> [Customer Management]
+    [Inventory System API] --> [Report Service]
+    [Inventory System API] --> [Alert/Notification Service]
+
+    component "User Interface" as UI
+    component "Inventory System API" as API
+    component "Database" as DB
+    component "Authentication Service" as Auth
+    component "Product Management" as Product
+    component "Stock Management" as Stock
+    component "Supplier Management" as Supplier
+    component "Customer Management" as Customer
+    component "Report Service" as Report
+    component "Alert/Notification Service" as Alert
+}
+
+@enduml
+
