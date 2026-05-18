@@ -4,9 +4,9 @@ type = int(input("Enter Project type number: (1.organic,2.semi-detached,3.embedd
 coh = float(input("Enter cost per hour: "))
 
 if type == 1:
-    effort = 2.4 * (kloc  1.05)
+    effort = 2.4 * (kloc**1.05)
 elif type == 2:
-    effort = 3.0 * (kloc  1.12)
+    effort = 3.0 * (kloc**1.12)
 elif type == 3:
     effort = 3.6 * (kloc ** 1.20)
 else :
