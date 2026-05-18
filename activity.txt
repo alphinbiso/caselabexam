@@ -1,14 +1,4 @@
-/****************************************
- Name :NAEEMA NISHAD
- Semester :S6
- Branch :Computer Science and Design
- Roll No: 36
- Program :Activity Diagram
- Date :31/12/2025
-****************************************/
-PROGRAM
-----------------------------------------
-/***************************************
+
 @startuml
 |Admin|
 start
